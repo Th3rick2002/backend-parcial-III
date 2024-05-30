@@ -1,1 +1,5 @@
-#Parcial III
+##Parcial III
+
+ejecutar **npm install** para instalar dependecias del proyecto
+
+ejecutar **node index.js** para correr servidor express
