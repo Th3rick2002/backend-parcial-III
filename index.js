@@ -1,21 +1,24 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const app = express();
-//const Courses = require('./routes/routes');
-const port = 3000;
+const express=require('express')
+const mongoose=require('mongoose')
+const bodyparser=require('body-parser')
+const backcouerses=require('./routes/routes')
 
+const port = 3000;
+const app=express()
+
+app.use(bodyparser.json())
+app.use('/api/courses',backcouerses)
 const mongoUrl = 'mongodb://localhost:27017/coursesdb';
 
 mongoose.connect(mongoUrl)
-    .then(() => {
-        console.log('Connected to MongoDB');
-        const db = mongoose.connection.db;
-    })
-    .catch(err => console.error('Could not connect to MongoDB', err));
+
+const db=mongoose.connection
+db.on('error',console.error.bind(console,'error de conexion a mongo db'))
+db.once('open',()=>{})
 
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
 
-//app.use('/courses');
+
