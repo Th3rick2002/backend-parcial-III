@@ -3,7 +3,7 @@ const mongoose=require('mongoose')
 const bodyparser=require('body-parser')
 const backcouerses=require('./routes/routes')
 
-const port = 3000;
+const port = 5000;
 const app=express()
 
 app.use(bodyparser.json())
