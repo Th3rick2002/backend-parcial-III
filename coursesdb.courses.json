@@ -1,0 +1,86 @@
+[{
+  "_id": {
+    "$oid": "665c03d9d5e1df0647488e70"
+  },
+  "title": "Introducción a la terminal de Linux",
+  "modules": {
+    "module1": [
+      {
+        "title": "Introducción a la terminal",
+        "videoLink": "https://www.youtube.com/watch?v=-cIivfxriK8",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c3224"
+        }
+      },
+      {
+        "title": "Directorios en Linux",
+        "videoLink": "https://www.youtube.com/watch?v=uBIzEyAGASo&",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c3225"
+        }
+      },
+      {
+        "title": "Listando contenido de un directorio",
+        "videoLink": "https://www.youtube.com/watch?v=HzFS0jvAi7s",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c3226"
+        }
+      },
+      {
+        "title": "Moviendo de directorio",
+        "videoLink": "https://www.youtube.com/watch?v=SVNniXSHJAs",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c3227"
+        }
+      },
+      {
+        "title": "Viendo contenido de un archivo",
+        "videoLink": "https://www.youtube.com/watch?v=28iy8_rfrIQ",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c3228"
+        }
+      }
+    ],
+    "module2": [
+      {
+        "title": "Convirtiendose en administrador",
+        "videoLink": "https://www.youtube.com/watch?v=VK4bBRkaVCs",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c3229"
+        }
+      },
+      {
+        "title": "Creando archivos y directorios",
+        "videoLink": "https://www.youtube.com/watch?v=wFOkW7edcDI",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c322a"
+        }
+      },
+      {
+        "title": "Copiando archivos y directorios",
+        "videoLink": "https://www.youtube.com/watch?v=PmNM0Vhdv98",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c322b"
+        }
+      },
+      {
+        "title": "Borrando y moviendo archivos y directorios",
+        "videoLink": "https://www.youtube.com/watch?v=b7DF-5vSME8",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c322c"
+        }
+      },
+      {
+        "title": "Buscando archivos",
+        "videoLink": "https://www.youtube.com/watch?v=gO-o-wOBtZA",
+        "_id": {
+          "$oid": "665c1949e9fc5bbaf89c322d"
+        }
+      }
+    ]
+  },
+  "description": "Aprende los fundamentos de la línea de comandos Linux. Una herramienta que todo programador debe conocer.",
+  "image": "https://edteam-media.s3.amazonaws.com/courses/medium/fd3a82f9-16e7-496a-8e05-b3f5ee4b7f93.png",
+  "instructor": "Alexys Lozada",
+  "__v": 3
+}]
