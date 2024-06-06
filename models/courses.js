@@ -2,20 +2,17 @@ const mongoose = require('mongoose')
 
 const cursosSchema = new mongoose.Schema({
     title: String,
-    modules: {
-        module1: [
-            {
-                title: String,
-                videoLink: String,
-            },
-        ],
-        module2: [
-            {
-                title: String,
-                videoLink: String
-            }
-        ],
-    },
+    modules: [
+        {
+            module: String,
+            syllabus:[
+                {
+                    topic: String,
+                    videoLink: String
+                }
+            ]
+        }
+    ],
     description: String,
     image: String,
     instructor: String,

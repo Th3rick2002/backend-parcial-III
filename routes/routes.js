@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Course = require('../models/courses');
 
-
 router.get('/', async (req, res) => {
     try {
         const courses = await Course.find();
@@ -16,16 +15,13 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const course = new Course({
         title: req.body.title,
-        modules: {
-            module1: req.body.modules.module1.map(item => ({
-                title: item.title,
-                videoLink: item.videoLink
-            })),
-            module2: req.body.modules.module2.map(item => ({
-                title: item.title,
+        modules: req.body.modules.map(module => ({
+            module: module.module,
+            syllabus: module.syllabus.map(item => ({
+                topic: item.topic,
                 videoLink: item.videoLink
             }))
-        },
+        })),
         description: req.body.description,
         image: req.body.image,
         instructor: req.body.instructor
@@ -64,18 +60,13 @@ router.put('/:id', getCourse, async (req, res) => {
         res.course.title = req.body.title;
     }
     if (req.body.modules != null) {
-        if (req.body.modules.module1 != null) {
-            res.course.modules.module1 = req.body.modules.module1.map(item => ({
-                title: item.title,
+        res.course.modules = req.body.modules.map(module => ({
+            module: module.module,
+            syllabus: module.syllabus.map(item => ({
+                topic: item.topic,
                 videoLink: item.videoLink
-            }));
-        }
-        if (req.body.modules.module2 != null) {
-            res.course.modules.module2 = req.body.modules.module2.map(item => ({
-                title: item.title,
-                videoLink: item.videoLink
-            }));
-        }
+            }))
+        }));
     }
     if (req.body.description != null) {
         res.course.description = req.body.description;
@@ -102,7 +93,7 @@ router.delete('/:id', async (req, res) => {
         if (course == null) {
             return res.status(404).json({ message: 'Curso no encontrado' });
         }
-        res.json({ message: 'Curso eliminado con éxito', data: course });
+        res.json({ message: 'Curso eliminado con éxito' });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
